@@ -1,0 +1,32 @@
+---
+import HelloMessage from '../components/HelloMessage.jsx'
+import { Toaster } from 'react-hot-toast'
+
+import Footer from '../components/Footer.astro';
+import MainLayout from '../layouts/MainLayout.astro'
+---
+
+<MainLayout title="My About Website">
+  <h1 class="text-4xl font-bold text-center">About</h1>
+
+  <HelloMessage client:load />
+
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem consequuntur accusantium amet a
+    perspiciatis maxime asperiores velit error ex quos obcaecati aut voluptate, fugit placeat autem nobis natus delectus
+    voluptas magnam explicabo quidem. Reprehenderit dolores dolorem suscipit temporibus quia laborum molestiae
+    exercitationem nihil quae nemo labore dolorum nulla, quidem ducimus mollitia laudantium voluptatibus veniam
+    expedita. Quod, reprehenderit, nesciunt voluptatem odio assumenda qui obcaecati minus iure corrupti, autem eum
+    ducimus eius labore dignissimos eos facilis vitae similique! Atque excepturi dolore adipisci ipsum nulla maxime odit
+    aut mollitia incidunt sit, modi expedita quis velit voluptates et voluptatibus eveniet facere enim. Dicta, porro.
+  </p>
+
+  <Footer customText="this is my footer" />
+  <Toaster client:load />
+
+</MainLayout>
+
+<style>
+  .title {
+    font-size: 7rem;
+  }
+</style>
